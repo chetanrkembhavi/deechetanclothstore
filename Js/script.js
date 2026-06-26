@@ -6,7 +6,10 @@
 // ================= Loader =================
 
 window.addEventListener("load", function () {
-    document.getElementById("loader").style.display = "none";
+    const loader = document.getElementById("loader");
+    if (loader) {
+        loader.style.display = "none";
+    }
 });
 
 // ================= Mobile Menu =================
@@ -14,9 +17,11 @@ window.addEventListener("load", function () {
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
-menuToggle.addEventListener("click", function () {
-    menu.classList.toggle("active");
-});
+if (menuToggle && menu) {
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+}
 
 // ================= Image Slider =================
 
@@ -25,11 +30,18 @@ showSlides();
 
 function showSlides() {
 
-    let slides = document.getElementsByClassName("slides");
+    let topButton = document.getElementById("topBtn");
 
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+window.onscroll = function () {
+
+    if (!topButton) return;
+
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topButton.style.display = "block";
+    } else {
+        topButton.style.display = "none";
     }
+};
 
     slideIndex++;
 
