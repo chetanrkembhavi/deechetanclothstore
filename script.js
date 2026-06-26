@@ -95,3 +95,36 @@ slides[slideIndex-1].style.display="block";
 setTimeout(showSlides,3000);
 
 }
+window.onscroll=function(){
+
+scrollFunction();
+
+};
+
+function scrollFunction(){
+
+let btn=document.getElementById("topBtn");
+
+if(document.body.scrollTop>300 ||
+
+document.documentElement.scrollTop>300)
+
+btn.style.display="block";
+
+else
+
+btn.style.display="none";
+
+}
+
+function topFunction(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
