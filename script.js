@@ -128,3 +128,10 @@ behavior:"smooth"
 });
 
 }
+document.querySelector(".menu-toggle").onclick=function(){
+
+document.getElementById("menu")
+
+.classList.toggle("show");
+
+};
