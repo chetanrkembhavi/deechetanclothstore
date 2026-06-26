@@ -414,3 +414,50 @@ nav ul li{
     color:#ff9800;
     margin-bottom:12px;
 }
+/* ================= REVIEWS ================= */
+
+.reviews{
+    padding:70px 8%;
+    background:#fff;
+}
+
+.review-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.review-card{
+    background:#f8f8f8;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+    text-align:center;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+}
+
+/* ================= FEEDBACK ================= */
+
+.feedback{
+    padding:70px 8%;
+    background:#fafafa;
+}
+
+.feedback form{
+    max-width:700px;
+    margin:auto;
+}
+
+.feedback input,
+.feedback textarea{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
