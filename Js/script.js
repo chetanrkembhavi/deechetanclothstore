@@ -25,36 +25,31 @@ if (menuToggle && menu) {
 
 // ================= Image Slider =================
 
-let slideIndex = 0;
-showSlides();
+const slides = document.getElementsByClassName("slides");
 
-function showSlides() {
+if (slides.length > 0) {
 
-    let topButton = document.getElementById("topBtn");
+    let slideIndex = 0;
 
-window.onscroll = function () {
+    showSlides();
 
-    if (!topButton) return;
+    function showSlides() {
 
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        topButton.style.display = "block";
-    } else {
-        topButton.style.display = "none";
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+
+        setTimeout(showSlides, 3000);
     }
-};
-
-    slideIndex++;
-
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-
-    setTimeout(showSlides, 3000);
-
 }
-
 // ================= Search =================
 
 function searchProducts() {
