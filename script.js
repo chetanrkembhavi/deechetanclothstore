@@ -55,3 +55,12 @@ function showCart(){
     alert("You have " + cart + " item(s) in your cart.");
 
 }
+// ======================
+// Dark Mode
+// ======================
+
+function toggleDarkMode(){
+
+document.body.classList.toggle("dark");
+
+}
