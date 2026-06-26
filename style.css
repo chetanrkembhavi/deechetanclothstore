@@ -789,3 +789,30 @@ color:#ff9800;
     object-fit:contain;
     margin-bottom:15px;
 }
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:70px 8%;
+    background:#f9f9f9;
+}
+
+.service-box{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.service-box:hover{
+    transform:translateY(-10px);
+}
+
+.service-box h3{
+    margin:15px 0;
+    color:#ff9800;
+}
