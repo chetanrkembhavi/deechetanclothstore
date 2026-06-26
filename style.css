@@ -1,26 +1,38 @@
+/* =========================
+   Dee Chetan Cloth Store
+   style.css
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
     background:#f5f5f5;
+    color:#333;
 }
 
-/* Navigation */
+/* Header */
+
+header{
+    background:#111;
+    color:#fff;
+    padding:15px 8%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
 
 .navbar{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:#111;
-    color:white;
-    padding:18px 8%;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    flex-wrap:wrap;
 }
 
 .logo{
@@ -29,29 +41,38 @@ body{
     color:#ff9800;
 }
 
-.menu{
+/* Navigation */
+
+nav ul{
     display:flex;
     list-style:none;
 }
 
-.menu li{
-    margin:0 18px;
+nav ul li{
+    margin:0 15px;
 }
 
-.menu a{
-    color:white;
+nav ul li a{
     text-decoration:none;
-    font-size:18px;
+    color:white;
+    font-weight:bold;
     transition:.3s;
 }
 
-.menu a:hover{
+nav ul li a:hover{
     color:#ff9800;
 }
 
+/* Icons */
+
+.icons{
+    display:flex;
+    align-items:center;
+}
+
 .icons i{
-    margin-left:20px;
-    font-size:22px;
+    margin-left:18px;
+    font-size:20px;
     cursor:pointer;
     transition:.3s;
 }
@@ -59,4 +80,305 @@ body{
 .icons i:hover{
     color:#ff9800;
     transform:scale(1.2);
+}
+
+/* Hero */
+
+.hero{
+    height:550px;
+    background:url("../images/banner.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#ff9800;
+    color:white;
+    padding:14px 35px;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#e67e00;
+}
+
+/* Search */
+
+.search-section{
+    padding:35px;
+    text-align:center;
+}
+
+.search-box{
+    width:60%;
+    max-width:600px;
+    padding:14px;
+    border-radius:30px;
+    border:1px solid #ddd;
+    font-size:17px;
+}
+
+/* Categories */
+
+.categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px;
+}
+
+.category{
+    width:180px;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-8px);
+}
+
+.category i{
+    font-size:45px;
+    color:#ff9800;
+    margin-bottom:15px;
+}
+
+/* Section */
+
+.section-title{
+    text-align:center;
+    margin-top:30px;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+/* Products */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    padding:40px 8%;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+    transition:.35s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+.discount{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff3b30;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.wishlist{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:40px;
+    height:40px;
+    background:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.card-content{
+    padding:18px;
+}
+
+.rating{
+    color:#f7b500;
+    margin:8px 0;
+}
+
+.price{
+    margin:15px 0;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#888;
+    margin-right:10px;
+}
+
+.new-price{
+    color:#28a745;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.sizes{
+    margin:15px 0;
+}
+
+.size{
+    display:inline-block;
+    background:#111;
+    color:white;
+    padding:7px 14px;
+    border-radius:20px;
+    margin:4px;
+    font-size:13px;
+}
+
+.order-btn{
+    width:100%;
+    background:#25D366;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    background:#128C7E;
+}
+
+/* About */
+
+.about{
+    background:white;
+    padding:70px 10%;
+    text-align:center;
+}
+
+.about h2{
+    margin-bottom:20px;
+}
+
+/* Contact */
+
+.contact{
+    padding:70px 10%;
+    text-align:center;
+    background:#fafafa;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    display:inline-block;
+    box-shadow:0 6px 15px rgba(0,0,0,.12);
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+/* Floating WhatsApp */
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:28px;
+    box-shadow:0 6px 12px rgba(0,0,0,.25);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+nav ul{
+    flex-direction:column;
+    margin-top:15px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.search-box{
+    width:90%;
+}
+
+.logo{
+    font-size:22px;
+}
+
 }
