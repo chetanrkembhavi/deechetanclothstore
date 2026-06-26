@@ -536,3 +536,36 @@ justify-content:center;
 align-items:center;
 
 }
+/* Dark Mode */
+
+.dark{
+
+background:#121212;
+
+color:white;
+
+}
+
+.dark .card,
+.dark .category,
+.dark .review-card,
+.dark .highlight-box,
+.dark .contact-box{
+
+background:#1f1f1f;
+
+color:white;
+
+}
+
+.dark header{
+
+background:#000;
+
+}
+
+.dark footer{
+
+background:#000;
+
+}
