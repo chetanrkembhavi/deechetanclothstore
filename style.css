@@ -461,3 +461,12 @@ nav ul li{
     border-radius:10px;
     font-size:16px;
 }
+/* Wishlist Active */
+
+.wishlist.active{
+
+background:#ff1744;
+
+color:white;
+
+}
