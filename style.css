@@ -691,3 +691,46 @@ background:#e67e00;
 transform:scale(1.05);
 
 }
+.newsletter{
+
+background:#222;
+
+color:white;
+
+padding:60px 20px;
+
+text-align:center;
+
+}
+
+.newsletter input{
+
+padding:12px;
+
+width:300px;
+
+max-width:90%;
+
+border:none;
+
+border-radius:30px;
+
+margin:10px;
+
+}
+
+.newsletter button{
+
+padding:12px 25px;
+
+background:#ff9800;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+}
