@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dee Chetan Cloth Store</title>
+
+    <meta name="description" content="Dee Chetan Cloth Store - Premium Fashion for Men, Women & Kids">
+    <meta name="keywords" content="Clothing Store, Fashion, Shirts, T-Shirts, Jeans, Women Wear, Kids Wear">
+    <meta name="author" content="Dee Chetan Cloth Store">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= Loader ================= -->
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ================= Scroll Top ================= -->
+
+    <button id="topBtn" onclick="topFunction()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ================= Header ================= -->
+
+    <header>
+
+        <div class="navbar">
+
+            <!-- Logo -->
+
+            <div class="logo">
+                🛍️ Dee Chetan Cloth Store
+            </div>
+
+            <!-- Mobile Menu -->
+
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Navigation -->
+
+            <nav id="menu">
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#categories">Categories</a></li>
+
+                    <li><a href="#products">Products</a></li>
+
+                    <li><a href="#about">About</a></li>
+
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Icons -->
+
+            <div class="icons">
+
+                <i class="fas fa-search"></i>
+
+                <i class="far fa-heart"></i>
+
+                <div class="cart-icon" onclick="showCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+
+                <i class="fas fa-moon" onclick="toggleDarkMode()"></i>
+
+                <i class="far fa-user"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ================= Hero Slider ================= -->
+
+    <!-- ================= HERO BANNER ================= -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="tag">NEW COLLECTION 2026</span>
+
+        <h1>
+            FASHION<br>
+            <span>THAT DEFINES YOU</span>
+        </h1>
+
+        <p>
+            Premium Quality | Trending Styles | Best Prices
+        </p>
+
+        <div class="offer-box">
+
+            <div>
+
+                <h2>UP TO</h2>
+
+                <h1>50% OFF</h1>
+
+            </div>
+
+            <div>
+
+                <h3>SPECIAL OFFER</h3>
+
+                <p>Limited Time Only</p>
+
+            </div>
+
+        </div>
+
+        <a href="#products" class="shop-btn">
+
+            Shop Now
+
+        </a>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img
+        src="images/banner-model.png"
+        alt="Fashion Model">
+
+    </div>
+
+</section>
+
+    <!-- ================= Counter ================= -->
+
+    <section class="counter-section">
+
+        <div class="counter-box">
+            <h2>500+</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div class="counter-box">
+            <h2>150+</h2>
+            <p>Products</p>
+        </div>
+
+        <div class="counter-box">
+            <h2>50+</h2>
+            <p>New Arrivals</p>
+        </div>
+
+        <div class="counter-box">
+            <h2>5★</h2>
+            <p>Customer Rating</p>
+        </div>
+
+    </section>
+
+    <!-- ================= Search ================= -->
+
+    <section class="search-section">
+
+        <input
+            type="text"
+            id="searchInput"
+            class="search-box"
+            placeholder="🔍 Search Products..."
+            onkeyup="searchProducts()">
+
+    </section>
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories">
+
+    <h2 class="section-title">Shop by Category</h2>
+
+    <div class="categories">
+
+        <div class="category">
+            <i class="fas fa-shirt"></i>
+            <h3>Men</h3>
+            <p>Premium Shirts & T-Shirts</p>
+        </div>
+
+        <div class="category">
+            <i class="fas fa-person-dress"></i>
+            <h3>Women</h3>
+            <p>Stylish Dresses & Kurtis</p>
+        </div>
+
+        <div class="category">
+            <i class="fas fa-child"></i>
+            <h3>Kids</h3>
+            <p>Comfortable Kids Wear</p>
+        </div>
+
+        <div class="category">
+            <i class="fas fa-bag-shopping"></i>
+            <h3>Accessories</h3>
+            <p>Bags, Caps & More</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= OFFER ================= -->
+
+<section class="offer-banner">
+
+    <h2>🔥 GRAND OPENING SALE 🔥</h2>
+
+    <p>Flat 50% OFF on Selected Products</p>
+
+</section>
+
+<!-- ================= FILTER ================= -->
+
+<section class="filter-section">
+
+    <h2 class="section-title">Browse Products</h2>
+
+    <div class="filter-buttons">
+
+        <button onclick="filterProducts('all')">All</button>
+
+        <button onclick="filterProducts('men')">Men</button>
+
+        <button onclick="filterProducts('women')">Women</button>
+
+        <button onclick="filterProducts('kids')">Kids</button>
+
+    </div>
+
+</section>
+
+<!-- ================= BRANDS ================= -->
+
+<section class="brands">
+
+    <h2 class="section-title">Top Brands</h2>
+
+    <div class="brand-container">
+
+        <div class="brand-card">
+            <img src="images/brand1.png" alt="Levi's">
+            <h3>Levi's</h3>
+        </div>
+
+        <div class="brand-card">
+            <img src="images/brand2.png" alt="Nike">
+            <h3>Nike</h3>
+        </div>
+
+        <div class="brand-card">
+            <img src="images/brand3.png" alt="Puma">
+            <h3>Puma</h3>
+        </div>
+
+        <div class="brand-card">
+            <img src="images/brand4.png" alt="Adidas">
+            <h3>Adidas</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= SALE ================= -->
+
+<section class="sale-banner">
+
+    <h1>🔥 END OF SEASON SALE 🔥</h1>
+
+    <h2>UP TO 70% OFF</h2>
+
+    <p>Limited Time Offer</p>
+
+    <a href="#products" class="btn">Shop Now</a>
+
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products">
+
+<h2 class="section-title">Trending Products</h2>
+
+<div class="products">
+
+<!-- Product 1 -->
+
+<div class="card product-card men">
+
+<div class="discount">20% OFF</div>
+
+<div class="wishlist" onclick="toggleWishlist(this)">
+<i class="far fa-heart"></i>
+</div>
+
+<img src="images/floral-shirt.jpg.webp" alt="Premium Floral Shirt">
+
+<div class="card-content">
+
+<h3>Premium Floral Shirt</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ (4.9)
+</div>
+
+<div class="price">
+<span class="old-price">₹1299</span>
+<span class="new-price">₹999</span>
+</div>
+
+<div class="sizes">
+<span>M</span>
+<span>L</span>
+<span>XL</span>
+<span>XXL</span>
+</div>
+
+<button class="order-btn" onclick="addToCart()">
+🛒 Add to Cart
+</button>
+
+<a href="https://wa.me/919986401997?text=Hi%20I%20want%20Premium%20Floral%20Shirt">
+<button class="order-btn">
+📲 Order on WhatsApp
+</button>
+</a>
+
+</div>
+
+</div>
+
+<!-- Product 2 -->
+
+<div class="card product-card women">
+
+<div class="discount">15% OFF</div>
+
+<div class="wishlist" onclick="toggleWishlist(this)">
+<i class="far fa-heart"></i>
+</div>
+
+<img src="images/shirt2.webp" alt="Casual Shirt">
+
+<div class="card-content">
+
+<h3>Casual Cotton Shirt</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ (4.8)
+</div>
+
+<div class="price">
+<span class="old-price">₹999</span>
+<span class="new-price">₹799</span>
+</div>
+
+<div class="sizes">
+<span>M</span>
+<span>L</span>
+<span>XL</span>
+</div>
+
+<button class="order-btn" onclick="addToCart()">
+🛒 Add to Cart
+</button>
+
+<a href="https://wa.me/919986401997?text=Hi%20I%20want%20Casual%20Cotton%20Shirt">
+<button class="order-btn">
+📲 Order on WhatsApp
+</button>
+</a>
+
+</div>
+
+</div>
+
+<!-- Product 3 -->
+
+<div class="card product-card kids">
+
+<div class="discount">30% OFF</div>
+
+<div class="wishlist" onclick="toggleWishlist(this)">
+<i class="far fa-heart"></i>
+</div>
+
+<img src="images/shirt3.webp" alt="Printed Party Shirt">
+
+<div class="card-content">
+
+<h3>Printed Party Shirt</h3>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ (5.0)
+</div>
+
+<div class="price">
+<span class="old-price">₹1499</span>
+<span class="new-price">₹1049</span>
+</div>
+
+<div class="sizes">
+<span>L</span>
+<span>XL</span>
+<span>XXL</span>
+</div>
+
+<button class="order-btn" onclick="addToCart()">
+🛒 Add to Cart
+</button>
+
+<a href="https://wa.me/919986401997?text=Hi%20I%20want%20Printed%20Party%20Shirt">
+<button class="order-btn">
+📲 Order on WhatsApp
+</button>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services">
+
+    <div class="service-box">
+        🚚
+        <h3>Free Shipping</h3>
+        <p>On Orders Above ₹999</p>
+    </div>
+
+    <div class="service-box">
+        🔄
+        <h3>Easy Returns</h3>
+        <p>7 Days Return Policy</p>
+    </div>
+
+    <div class="service-box">
+        💳
+        <h3>Secure Payment</h3>
+        <p>100% Safe Payment</p>
+    </div>
+
+    <div class="service-box">
+        📞
+        <h3>24/7 Support</h3>
+        <p>Always Ready To Help</p>
+    </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="highlights">
+
+<h2 class="section-title">Why Choose Dee Chetan Cloth Store?</h2>
+
+<div class="highlight-box">
+<h3>🚚 Fast Delivery</h3>
+<p>Safe & Fast Delivery Across India.</p>
+</div>
+
+<div class="highlight-box">
+<h3>💯 Premium Quality</h3>
+<p>High Quality Fabric & Stitching.</p>
+</div>
+
+<div class="highlight-box">
+<h3>💳 Secure Payment</h3>
+<p>UPI, Cash & Bank Transfer Accepted.</p>
+</div>
+
+<div class="highlight-box">
+<h3>⭐ Trusted Store</h3>
+<p>Trusted By Hundreds Of Happy Customers.</p>
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about">
+
+<h2 class="section-title">About Us</h2>
+
+<p>
+
+Welcome to <strong>Dee Chetan Cloth Store</strong>.
+
+We offer premium clothing for Men, Women and Kids with the latest fashion at affordable prices.
+
+</p>
+
+<h3>
+✨ Fashion for Every Style, Quality for Every Smile ✨
+</h3>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-box">
+
+<p><strong>📞 Phone:</strong> +91 9986401997</p>
+
+<p><strong>📧 Email:</strong> chetankembhavi2000@gmail.com</p>
+
+<p>
+
+<strong>📍 Address:</strong><br>
+
+Kanakapura Main Road,<br>
+
+Thathaguni,<br>
+
+Opp. Mahalaxmi Clinic
+
+</p>
+
+<p>
+
+<strong>🕒 Store Timing</strong><br>
+
+Monday - Sunday<br>
+
+10:00 AM - 9:00 PM
+
+</p>
+
+<a class="btn"
+href="https://maps.app.goo.gl/YqCS5rHVzMdA57ww7?g_st=ac"
+target="_blank">
+
+View Store Location
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+
+<section class="instagram">
+
+<h2 class="section-title">
+
+Follow Us On Instagram
+
+</h2>
+
+<p>@deechetanclothstore</p>
+
+<div class="instagram-gallery">
+
+<img src="images/insta1.jpg" alt="">
+<img src="images/insta2.jpg" alt="">
+<img src="images/insta3.jpg" alt="">
+<img src="images/insta4.jpg" alt="">
+<img src="images/insta5.jpg" alt="">
+<img src="images/insta6.jpg" alt="">
+
+</div>
+
+<a href="https://instagram.com/" class="btn" target="_blank">
+
+Follow Now
+
+</a>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<h2>Stay Updated</h2>
+
+<p>Subscribe For Latest Offers.</p>
+
+<input type="email" placeholder="Enter Your Email">
+
+<button>Subscribe</button>
+
+</section>
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="reviews">
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="review-container">
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>Excellent Quality Products.</p>
+<h4>- Rahul</h4>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>Very Nice Collection.</p>
+<h4>- Priya</h4>
+</div>
+
+<div class="review-card">
+⭐⭐⭐⭐⭐
+<p>Affordable Prices & Fast Delivery.</p>
+<h4>- Kiran</h4>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEEDBACK ================= -->
+
+<section class="feedback">
+
+<h2 class="section-title">
+
+Send Feedback
+
+</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Write Your Feedback"></textarea>
+
+<button class="btn" type="submit">
+
+Submit Feedback
+
+</button>
+
+</form>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>🛍️ Dee Chetan Cloth Store</h2>
+
+<p>
+
+Fashion for Every Style, Quality for Every Smile.
+
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+<a href="https://wa.me/919986401997"><i class="fab fa-whatsapp"></i></a>
+
+</div>
+
+<p>
+
+© 2026 Dee Chetan Cloth Store. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a href="https://wa.me/919986401997"
+class="whatsapp"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
