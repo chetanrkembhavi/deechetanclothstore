@@ -25,3 +25,12 @@ function searchProducts() {
     });
 
 }
+// ===============================
+// Wishlist
+// ===============================
+
+function toggleWishlist(icon){
+
+    icon.classList.toggle("active");
+
+}
