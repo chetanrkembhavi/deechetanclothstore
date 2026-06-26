@@ -734,3 +734,26 @@ border-radius:30px;
 cursor:pointer;
 
 }
+.social-icons{
+
+margin:20px 0;
+
+}
+
+.social-icons a{
+
+color:white;
+
+font-size:28px;
+
+margin:0 15px;
+
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+color:#ff9800;
+
+}
