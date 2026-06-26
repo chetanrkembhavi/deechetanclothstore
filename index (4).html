@@ -85,9 +85,11 @@
 <section class="search-section">
 
     <input
-        type="text"
-        class="search-box"
-        placeholder="🔍 Search Products...">
+    type="text"
+    id="searchInput"
+    class="search-box"
+    placeholder="🔍 Search Products..."
+    onkeyup="searchProducts()">
 
 </section>
 
@@ -153,7 +155,7 @@
 <section class="products">
 
     <!-- Product 1 -->
-    <div class="card">
+   <div class="card product-card">
 
         <div class="discount">20% OFF</div>
 
@@ -195,7 +197,7 @@
 
     <!-- Product 2 -->
 
-    <div class="card">
+   <div class="card product-card">
 
         <div class="discount">15% OFF</div>
 
@@ -236,7 +238,7 @@
 
     <!-- Product 3 -->
 
-    <div class="card">
+   <div class="card product-card">
 
         <div class="discount">30% OFF</div>
 
