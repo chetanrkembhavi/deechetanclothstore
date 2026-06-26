@@ -164,3 +164,7 @@ product.style.display="none";
 });
 
 }
+// Loading Screen
+window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+});
