@@ -898,3 +898,36 @@ cursor:pointer;
 transform:scale(1.05);
 
 }
+/* ================= COUNTERS ================= */
+
+.counter-section{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+padding:70px 8%;
+
+background:#ff9800;
+
+color:white;
+
+text-align:center;
+
+}
+
+.counter-box{
+
+padding:30px;
+
+}
+
+.counter-box h2{
+
+font-size:45px;
+
+margin-bottom:10px;
+
+}
