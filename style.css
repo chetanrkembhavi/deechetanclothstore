@@ -470,3 +470,30 @@ background:#ff1744;
 color:white;
 
 }
+.offer-banner{
+
+background:#ff9800;
+
+color:white;
+
+font-size:32px;
+
+font-weight:bold;
+
+padding:25px;
+
+text-align:center;
+
+animation:blink 2s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.75;
+
+}
+
+}
