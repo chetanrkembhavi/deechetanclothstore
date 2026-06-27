@@ -1366,3 +1366,47 @@ justify-content:center;
 align-items:center;
 
 }
+
+/* ================= Product Hover ================= */
+
+.product-card{
+
+transition:.35s;
+
+overflow:hidden;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.product-card img{
+
+transition:.4s;
+
+}
+
+.product-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.order-btn{
+
+transition:.3s;
+
+}
+
+.order-btn:hover{
+
+background:#000;
+
+color:#fff;
+
+}
