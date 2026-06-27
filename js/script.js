@@ -50,35 +50,36 @@ if (slides.length > 0) {
         setTimeout(showSlides, 3000);
     }
 }
-// ================= Search =================
+// ================= Advanced Product Search =================
 
 function searchProducts() {
 
-    let input = document
+    const input = document
         .getElementById("searchInput")
         .value
-        .toUpperCase();
+        .toLowerCase();
 
-    let cards = document.querySelectorAll(".product-card");
+    const cards = document.querySelectorAll(".product-card");
 
-    cards.forEach(function(card){
+    cards.forEach(card => {
 
-        let title = card.querySelector("h3").innerText.toUpperCase();
+        const name = card.querySelector("h3")?.innerText.toLowerCase() || "";
+        const category = card.className.toLowerCase();
+        const text = card.innerText.toLowerCase();
 
-        if(title.indexOf(input) > -1){
-
-            card.style.display="block";
-
-        }else{
-
-            card.style.display="none";
-
+        if (
+            name.includes(input) ||
+            category.includes(input) ||
+            text.includes(input)
+        ) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
         }
 
     });
 
 }
-
 // ================= Category Filter =================
 
 function filterProducts(category){
