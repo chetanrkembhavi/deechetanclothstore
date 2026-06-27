@@ -452,3 +452,11 @@ function showPromoSlide() {
 }
 
 setInterval(showPromoSlide, 4000);
+
+// ================= Product Image =================
+
+function changeImage(image){
+
+document.getElementById("mainImage").src=image.src;
+
+}
