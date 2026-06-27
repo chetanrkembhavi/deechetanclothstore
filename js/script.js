@@ -360,3 +360,20 @@ feedbackForm.reset();
 });
 
 }
+const checkoutForm = document.getElementById("checkoutForm");
+
+if (checkoutForm) {
+
+checkoutForm.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("🎉 Thank you! Your order has been placed successfully.");
+
+localStorage.removeItem("cart");
+
+window.location.href = "index.html";
+
+});
+
+}
