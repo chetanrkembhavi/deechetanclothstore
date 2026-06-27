@@ -657,3 +657,59 @@ flex-direction:column;
     color:#666;
     line-height:1.6;
 }
+
+/* ==========================
+   WISHLIST
+========================== */
+
+.wishlist{
+
+    position:absolute;
+
+    top:15px;
+
+    right:15px;
+
+    width:42px;
+
+    height:42px;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+}
+
+.wishlist i{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+.wishlist:hover{
+
+    background:#ff6b00;
+
+    transform:scale(1.1);
+
+}
+
+.wishlist:hover i{
+
+    color:white;
+
+}
