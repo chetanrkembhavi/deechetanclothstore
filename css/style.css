@@ -2146,3 +2146,74 @@ font-size:22px;
 margin:15px 0;
 
 }
+/* ================= BRANDS ================= */
+
+.brands{
+
+padding:80px 8%;
+
+background:#f8f8f8;
+
+}
+
+.brand-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+gap:25px;
+
+}
+
+.brand-card{
+
+background:#fff;
+
+padding:30px;
+
+border-radius:15px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:150px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.brand-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.brand-card img{
+
+max-width:120px;
+
+max-height:80px;
+
+object-fit:contain;
+
+filter:grayscale(100%);
+
+transition:.3s;
+
+}
+
+.brand-card:hover img{
+
+filter:none;
+
+transform:scale(1.1);
+
+}
