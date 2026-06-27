@@ -2082,3 +2082,67 @@ transition:.3s;
 background:#111;
 
 }
+
+/* ================= CUSTOMER REVIEWS ================= */
+
+.reviews{
+
+padding:80px 8%;
+
+background:#fff;
+
+}
+
+.review-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.review-card{
+
+background:#f9f9f9;
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.review-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.review-card img{
+
+width:90px;
+
+height:90px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:20px;
+
+}
+
+.stars{
+
+font-size:22px;
+
+margin:15px 0;
+
+}
