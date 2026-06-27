@@ -427,3 +427,28 @@ setInterval(function () {
     }
 
 }, 1000);
+
+// ================= Promo Slider =================
+
+const promoSlides = document.querySelectorAll(".slide");
+
+let promoIndex = 0;
+
+function showPromoSlide() {
+
+    if (promoSlides.length === 0) return;
+
+    promoSlides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    promoIndex++;
+
+    if (promoIndex >= promoSlides.length) {
+        promoIndex = 0;
+    }
+
+    promoSlides[promoIndex].classList.add("active");
+}
+
+setInterval(showPromoSlide, 4000);
