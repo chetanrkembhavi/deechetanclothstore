@@ -2647,3 +2647,52 @@ cursor:pointer;
 border-radius:40px;
 
 }
+/* ================= QUANTITY ================= */
+
+.quantity-box{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin:20px 0;
+
+}
+
+.quantity-box button{
+
+width:45px;
+
+height:45px;
+
+font-size:22px;
+
+border:none;
+
+background:#ff6600;
+
+color:white;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.quantity-box input{
+
+width:60px;
+
+text-align:center;
+
+font-size:18px;
+
+border:1px solid #ddd;
+
+padding:10px;
+
+border-radius:8px;
+
+}
