@@ -111,31 +111,52 @@ function filterProducts(category){
 
 // ================= Wishlist =================
 
-function toggleWishlist(element){
+// ================= Wishlist =================
 
-    let icon=element.querySelector("i");
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-    if(icon.classList.contains("far")){
+function toggleWishlist(element, name = "Product") {
+
+    const icon = element.querySelector("i");
+
+    const index = wishlist.indexOf(name);
+
+    if (index === -1) {
+
+        wishlist.push(name);
 
         icon.classList.remove("far");
-
         icon.classList.add("fas");
+        icon.style.color = "red";
 
-        icon.style.color="red";
+    } else {
+
+        wishlist.splice(index, 1);
+
+        icon.classList.remove("fas");
+        icon.classList.add("far");
+        icon.style.color = "";
 
     }
 
-    else{
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
-        icon.classList.remove("fas");
+    updateWishlistCount();
+}
 
-        icon.classList.add("far");
+function updateWishlistCount() {
 
-        icon.style.color="";
+    const count = document.getElementById("wishlist-count");
+
+    if (count) {
+
+        count.innerHTML = wishlist.length;
 
     }
 
 }
+
+updateWishlistCount();
 
 // ================= Shopping Cart =================
 
