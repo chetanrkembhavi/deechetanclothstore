@@ -399,3 +399,31 @@ window.location.href = "index.html";
 });
 
 }
+
+// ================= Countdown =================
+
+let totalSeconds = 6 * 60 * 60; // 6 Hours
+
+setInterval(function () {
+
+    let hours = Math.floor(totalSeconds / 3600);
+
+    let minutes = Math.floor((totalSeconds % 3600) / 60);
+
+    let seconds = totalSeconds % 60;
+
+    const h = document.getElementById("hours");
+    const m = document.getElementById("minutes");
+    const s = document.getElementById("seconds");
+
+    if (h && m && s) {
+        h.innerHTML = String(hours).padStart(2, "0");
+        m.innerHTML = String(minutes).padStart(2, "0");
+        s.innerHTML = String(seconds).padStart(2, "0");
+    }
+
+    if (totalSeconds > 0) {
+        totalSeconds--;
+    }
+
+}, 1000);
