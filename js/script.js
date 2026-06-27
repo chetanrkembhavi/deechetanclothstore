@@ -137,41 +137,144 @@ function toggleWishlist(element){
 
 }
 
-// ================= Cart =================
+// ================= Shopping Cart =================
 
-function addToCart(name="Premium Floral Shirt",price=999){
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let cart=JSON.parse(localStorage.getItem("cart")) || [];
+// Add Product
+function addToCart(name = "Premium Floral Shirt", price = 999, image = "images/floral-shirt.jpg.webp") {
 
-let existing=cart.find(item=>item.name===name);
+    let existing = cart.find(item => item.name === name);
 
-if(existing){
+    if (existing) {
+        existing.qty++;
+    } else {
+        cart.push({
+            name,
+            price,
+            image,
+            qty: 1
+        });
+    }
 
-existing.qty++;
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert(name + " added to cart!");
+}
+
+// Cart Count
+function updateCartCount() {
+
+    let count = 0;
+
+    cart.forEach(item => {
+        count += item.qty;
+    });
+
+    let cartCount = document.getElementById("cart-count");
+
+    if (cartCount) {
+        cartCount.innerHTML = count;
+    }
 
 }
 
-else{
+// Load Cart Page
+function loadCart() {
 
-cart.push({
+    let cartItems = document.getElementById("cart-items");
 
-name:name,
+    if (!cartItems) return;
 
-price:price,
+    cartItems.innerHTML = "";
 
-qty:1
+    let total = 0;
 
-});
+    cart.forEach((item, index) => {
+
+        total += item.price * item.qty;
+
+        cartItems.innerHTML += `
+
+        <div class="cart-item">
+
+            <img src="${item.image}" width="120">
+
+            <div class="cart-details">
+
+                <h3>${item.name}</h3>
+
+                <p>₹ ${item.price}</p>
+
+            </div>
+
+            <div class="quantity">
+
+                <button onclick="changeQty(${index},-1)">−</button>
+
+                <span>${item.qty}</span>
+
+                <button onclick="changeQty(${index},1)">+</button>
+
+            </div>
+
+            <h3>₹ ${item.price * item.qty}</h3>
+
+            <button class="remove-btn" onclick="removeItem(${index})">
+            Remove
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+    document.getElementById("cart-total").innerHTML = total;
 
 }
 
-localStorage.setItem("cart",JSON.stringify(cart));
+// Quantity
+function changeQty(index, value) {
 
-document.getElementById("cart-count").innerHTML=cart.length;
+    cart[index].qty += value;
 
-alert(name+" Added To Cart");
+    if (cart[index].qty <= 0) {
+
+        cart.splice(index, 1);
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    loadCart();
+
+    updateCartCount();
 
 }
+
+// Remove Product
+function removeItem(index) {
+
+    cart.splice(index, 1);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    loadCart();
+
+    updateCartCount();
+
+}
+
+window.onload = function () {
+
+    updateCartCount();
+
+    loadCart();
+
+};
 // ================= Dark Mode =================
 
 function toggleDarkMode(){
