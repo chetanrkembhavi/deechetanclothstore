@@ -389,33 +389,47 @@ font-size:18px;
     background:#111;
 }
 
-/* ==========================
+/* ==========================================
    FEATURED PRODUCTS
-========================== */
+========================================== */
 
 .featured-products{
-    padding:70px 8%;
-    background:#f8f8f8;
+    padding:80px 8%;
+    background:#f5f5f5;
 }
 
 .product-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
 }
 
 .product-card{
     background:#fff;
     border-radius:18px;
     overflow:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-    transition:.35s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    transition:0.3s;
     position:relative;
 }
 
 .product-card:hover{
     transform:translateY(-10px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.18);
 }
+
+.product-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.product-card:hover img{
+    transform:scale(1.05);
+}
+
+/* Discount Badge */
 
 .discount{
     position:absolute;
@@ -423,39 +437,41 @@ font-size:18px;
     left:15px;
     background:#ff3b30;
     color:#fff;
-    padding:8px 15px;
-    border-radius:25px;
+    padding:8px 14px;
+    border-radius:20px;
     font-size:13px;
     font-weight:bold;
 }
 
-.product-card img{
-    width:100%;
-    height:360px;
-    object-fit:cover;
-}
+/* Product Info */
 
 .product-info{
     padding:20px;
 }
 
 .product-info h3{
+    font-size:22px;
     margin-bottom:10px;
+    color:#222;
 }
 
 .rating{
-    color:#ff9800;
-    margin-bottom:15px;
+    color:#f5b301;
+    font-size:16px;
+    margin-bottom:12px;
 }
 
+/* Price */
+
 .price{
-    margin-bottom:15px;
+    margin:15px 0;
 }
 
 .old-price{
-    text-decoration:line-through;
     color:#888;
+    text-decoration:line-through;
     margin-right:10px;
+    font-size:18px;
 }
 
 .new-price{
@@ -464,55 +480,139 @@ font-size:18px;
     font-weight:bold;
 }
 
+/* Sizes */
+
 .sizes{
-    margin-bottom:20px;
+    margin:18px 0;
 }
 
 .sizes span{
     display:inline-block;
     background:#111;
     color:#fff;
-    padding:6px 12px;
+    padding:7px 13px;
     margin:5px;
     border-radius:20px;
+    font-size:14px;
+    transition:.3s;
 }
+
+.sizes span:hover{
+    background:#ff6b00;
+}
+
+/* Buttons */
 
 .buttons{
     display:flex;
     gap:10px;
-    margin-bottom:15px;
-}
-
-.cart-btn,
-.buy-btn{
-    flex:1;
-    border:none;
-    padding:12px;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:bold;
+    margin-top:15px;
 }
 
 .cart-btn{
+
+    flex:1;
+
     background:#111;
-    color:#fff;
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.cart-btn:hover{
+    background:#333;
 }
 
 .buy-btn{
+
+    flex:1;
+
     background:#ff6b00;
-    color:#fff;
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
 }
+
+.buy-btn:hover{
+    background:#e65c00;
+}
+
+/* WhatsApp */
 
 .whatsapp-btn{
+
     display:block;
+
+    margin-top:15px;
+
     text-align:center;
+
     background:#25D366;
-    color:#fff;
-    padding:12px;
-    border-radius:30px;
+
+    color:white;
+
     text-decoration:none;
+
+    padding:12px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    transition:.3s;
 }
 
+.whatsapp-btn:hover{
+    background:#128C7E;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.product-grid{
+grid-template-columns:1fr;
+}
+
+.product-card img{
+height:300px;
+}
+
+.product-info h3{
+font-size:20px;
+}
+
+.new-price{
+font-size:24px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+}
 /* ==========================
    WHY CHOOSE US
 ========================== */
