@@ -1,21 +1,19 @@
-// Shopping Cart
+// ===============================
+// Dee Chetan Shopping Cart
+// ===============================
 
-let cart = [];
+// Cart Elements
+const cartIcon = document.getElementById("cart-icon");
+const cartSidebar = document.getElementById("cartSidebar");
+const closeCart = document.getElementById("closeCart");
 
-const cartCount = document.querySelector(".cart-count");
+// Open Cart
+cartIcon.addEventListener("click", function(e){
+    e.preventDefault();
+    cartSidebar.classList.add("active");
+});
 
-const cartButtons = document.querySelectorAll(".cart-btn");
-
-cartButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        cart.push(1);
-
-        cartCount.textContent = cart.length;
-
-        alert("Product added to cart!");
-
-    });
-
+// Close Cart
+closeCart.addEventListener("click", function(){
+    cartSidebar.classList.remove("active");
 });
