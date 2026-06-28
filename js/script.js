@@ -115,3 +115,29 @@ searchInput.addEventListener("keyup", function () {
     });
 
 });
+
+// ===============================
+// Wishlist
+// ===============================
+
+document.querySelectorAll(".wishlist-btn").forEach(btn => {
+
+    btn.addEventListener("click", function () {
+
+        if (this.classList.contains("far")) {
+
+            this.classList.remove("far");
+            this.classList.add("fas");
+            this.style.color = "red";
+
+        } else {
+
+            this.classList.remove("fas");
+            this.classList.add("far");
+            this.style.color = "";
+
+        }
+
+    });
+
+});
