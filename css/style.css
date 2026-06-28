@@ -663,106 +663,60 @@ flex-direction:column;
     font-weight:bold;
 }
 
-/* ==========================
-   SHOPPING CART SIDEBAR
-========================== */
+/* ===========================
+   Shopping Cart Sidebar
+=========================== */
 
 .cart-sidebar{
-
     position:fixed;
-
     top:0;
-
-    right:-420px;
-
+    right:-450px;      /* Hidden outside screen */
     width:400px;
-
     height:100vh;
-
-    background:white;
-
+    background:#fff;
     box-shadow:-5px 0 20px rgba(0,0,0,.2);
-
-    transition:.4s;
-
-    z-index:9999;
-
+    z-index:99999;
+    transition:right .4s ease;
     display:flex;
-
     flex-direction:column;
-
 }
 
 .cart-sidebar.active{
-
     right:0;
-
 }
 
 .cart-header{
-
     background:#111;
-
-    color:white;
-
+    color:#fff;
     padding:20px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-}
-
-#closeCart{
-
-    font-size:30px;
-
-    cursor:pointer;
-
 }
 
 .cart-items{
-
     flex:1;
-
-    padding:20px;
-
     overflow-y:auto;
-
+    padding:20px;
 }
 
 .cart-footer{
-
     padding:20px;
-
     border-top:1px solid #ddd;
-
 }
 
 .checkout-btn{
-
     width:100%;
-
     padding:15px;
-
     border:none;
-
-    background:#ff6b00;
-
-    color:white;
-
     border-radius:30px;
-
+    background:#ff6b00;
+    color:#fff;
     font-size:18px;
-
     cursor:pointer;
-
 }
 
-.checkout-btn:hover{
-
-    background:#111;
-
+#closeCart{
+    cursor:pointer;
+    font-size:30px;
 }
