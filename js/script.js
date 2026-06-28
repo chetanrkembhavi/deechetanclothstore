@@ -1,19 +1,93 @@
 // ===============================
-// Dee Chetan Shopping Cart
+// Dee Chetan Cloth Store
+// Shopping Cart
 // ===============================
 
-// Cart Elements
+let cart = [];
+
 const cartIcon = document.getElementById("cart-icon");
 const cartSidebar = document.getElementById("cartSidebar");
 const closeCart = document.getElementById("closeCart");
+const cartItems = document.getElementById("cartItems");
+const cartCount = document.getElementById("cartCount");
+const cartTotal = document.getElementById("cartTotal");
 
 // Open Cart
-cartIcon.addEventListener("click", function(e){
+cartIcon.onclick = function(e){
     e.preventDefault();
     cartSidebar.classList.add("active");
-});
+};
 
 // Close Cart
-closeCart.addEventListener("click", function(){
+closeCart.onclick = function(){
     cartSidebar.classList.remove("active");
+};
+
+// Add Product
+document.querySelectorAll(".add-cart").forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const item={
+            name:button.dataset.name,
+            price:Number(button.dataset.price),
+            image:button.dataset.image
+        };
+
+        cart.push(item);
+
+        updateCart();
+
+    });
+
 });
+
+// Update Cart
+
+function updateCart(){
+
+    cartItems.innerHTML="";
+
+    let total=0;
+
+    cart.forEach((item,index)=>{
+
+        total+=item.price;
+
+        cartItems.innerHTML+=`
+
+        <div class="cart-product">
+
+            <img src="${item.image}">
+
+            <div>
+
+                <h4>${item.name}</h4>
+
+                <p>₹${item.price}</p>
+
+            </div>
+
+            <button onclick="removeItem(${index})">❌</button>
+
+        </div>
+
+        `;
+
+    });
+
+    cartCount.innerHTML=cart.length;
+
+    cartTotal.innerHTML="₹"+total;
+
+}
+
+// Remove Product
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
