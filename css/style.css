@@ -200,48 +200,19 @@ padding:12px;
 ========================== */
 
 .hero{
+    width:100%;
     height:650px;
     background:url("../images/banner.jpg") center center/cover no-repeat;
+    position:relative;
     display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    position:relative;
+    justify-content:center;
+    align-items:flex-end;
 }
 
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.15);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:600px;
-    margin-left:8%;
-    color:#fff;
-}
-
-.hero h1{
-    font-size:56px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:22px;
-    margin-bottom:35px;
-}
-
-.offer{
-    display:inline-block;
-    background:#ff6b00;
-    color:#fff;
-    padding:10px 24px;
-    border-radius:30px;
-    font-weight:bold;
-    margin-bottom:20px;
+.hero-overlay{
+    width:100%;
+    text-align:center;
+    padding-bottom:40px;
 }
 
 .shop-btn{
@@ -249,34 +220,29 @@ padding:12px;
     background:#ff6b00;
     color:#fff;
     text-decoration:none;
-    padding:15px 35px;
-    border-radius:30px;
+    padding:15px 40px;
+    border-radius:35px;
+    font-size:18px;
     font-weight:bold;
     transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 }
 
 .shop-btn:hover{
     background:#111;
+    transform:translateY(-3px);
 }
 
 @media(max-width:768px){
 
 .hero{
-    height:300px;
-    justify-content:center;
-    text-align:center;
+    height:260px;
+    background-position:center;
 }
 
-.hero-content{
-    margin:0 20px;
-}
-
-.hero h1{
-    font-size:34px;
-}
-
-.hero p{
+.shop-btn{
     font-size:16px;
+    padding:12px 28px;
 }
 
 }
