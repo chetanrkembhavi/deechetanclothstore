@@ -91,3 +91,27 @@ function removeItem(index){
     updateCart();
 
 }
+
+// ==========================
+// Live Product Search
+// ==========================
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function () {
+
+    const value = this.value.toLowerCase();
+
+    document.querySelectorAll(".product-card").forEach(card => {
+
+        const name = card.dataset.name.toLowerCase();
+
+        if (name.includes(value)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+});
